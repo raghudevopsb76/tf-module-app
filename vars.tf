@@ -12,5 +12,6 @@ variable "kms" {}
 variable "prometheus_cidrs" {}
 variable "alb_name" {}
 variable "listener_arn" {}
-
+variable "route53_zone_id" {}
+variable "priority" {}
 
