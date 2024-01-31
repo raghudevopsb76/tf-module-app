@@ -191,7 +191,7 @@ resource "aws_iam_instance_profile" "main" {
 }
 
 resource "aws_route53_record" "main" {
-  name    = "${var.component}-${var.env}"
+  name    = local.dns_name
   type    = "CNAME"
   zone_id = var.route53_zone_id
   ttl     = 30
@@ -209,7 +209,7 @@ resource "aws_lb_listener_rule" "main" {
 
   condition {
     host_header {
-      values = ["${var.component}-${var.env}.rdevopsb72.online"]
+      values = ["${local.dns_name}.rdevopsb72.online"]
     }
   }
 }

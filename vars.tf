@@ -14,4 +14,5 @@ variable "alb_name" {}
 variable "listener_arn" {}
 variable "route53_zone_id" {}
 variable "priority" {}
+variable "dns_name" {}
 
